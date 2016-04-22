@@ -18,8 +18,8 @@ import be.nabu.libs.scraper.Scraper;
 public class HTMLMethods {
 	
 	public static String scrape(Object html, Object config) throws IOException, JAXBException, SAXException, ParserConfigurationException {
-		String content = ScriptMethods.string(html);
-		Configuration configuration = (Configuration) (config instanceof Configuration ? config : Configuration.createUnmarshaller().unmarshal(new StringReader(ScriptMethods.string(config))));
+		String content = ScriptMethods.string(html, false);
+		Configuration configuration = (Configuration) (config instanceof Configuration ? config : Configuration.createUnmarshaller().unmarshal(new StringReader(ScriptMethods.string(config, false))));
 		Scraper scraper = new Scraper(new ByteArrayInputStream(content.getBytes()));
 		return scraper.rewrite(configuration).toString();
 	}
