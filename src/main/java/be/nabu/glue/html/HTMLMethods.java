@@ -9,7 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import be.nabu.glue.impl.methods.ScriptMethods;
+import be.nabu.glue.core.impl.methods.ScriptMethods;
 import be.nabu.libs.evaluator.annotations.MethodProviderClass;
 import be.nabu.libs.scraper.Configuration;
 import be.nabu.libs.scraper.Scraper;
